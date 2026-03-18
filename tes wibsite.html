@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Karya Desain Vintage Elegan</title>
+  <style>
+    body {font-family: 'Georgia', serif; background:#fdfaf6; margin:0;}
+    header {background:#2c2c2c; color:#fff; text-align:center; padding:2rem;}
+    nav a {color:#fff; margin:0 15px; text-decoration:none;}
+    .produk, .pembayaran, .deskripsi, .kontak {padding:2rem; text-align:center;}
+    .produk {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .card {background:#fff; border:1px solid #ddd; padding:1rem;}
+    .card img {max-width:100%;}
+    footer {background:#2c2c2c; color:#fff; text-align:center; padding:1rem;}
+    button {background:#2c2c2c; color:#fff; border:none; padding:10px 20px; cursor:pointer;}
+    button:hover {background:#444;}
+    .hidden {display:none;}
+    .pembayaran img {max-width:200px; margin-top:1rem;}
+    ul {list-style:none; padding:0;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Karya Desain Vintage Elegan</h1>
+    <nav>
+      <a href="#" onclick="showProduk()">Produk</a>
+      <a href="#" onclick="showPembayaran()">Pembayaran</a>
+      <a href="#" onclick="showDeskripsi()">Deskripsi</a>
+      <a href="#" onclick="showKontak()">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- Bagian Produk -->
+  <section id="produk" class="produk">
+    <div class="card">
+      <img src="C:/Users/ACER/Downloads/wow/WhatsApp Image 2026-03-18 at 3.14.33 AM.jpeg" alt="Produk 1">
+      <h3>Desain Vintage 1</h3>
+      <p>Rp 68.000</p>
+      <button onclick="showPembayaran()">Beli Sekarang</button>
+    </div>
+    <div class="card">
+      <img src="C:/Users/ACER/Downloads/wow/aa.jpeg" alt="Produk 2">
+      <h3>Desain Elegan 2</h3>
+      <p>Rp 83.000</p>
+      <button onclick="showPembayaran()">Beli Sekarang</button>
+    </div>
+  </section>
+
+  <!-- Bagian Pembayaran -->
+  <section id="pembayaran" class="pembayaran hidden">
+    <h2>Pembayaran Produk</h2>
+    <p>Silakan transfer ke nomor DANA/GoPay berikut:</p>
+    <h3>085261340251</h3>
+    <p>Scan QR Code di bawah untuk pembayaran cepat:</p>
+    <img src="qrcode-dana.png" alt="QR Code DANA/GoPay">
+    <br><br>
+    <button onclick="showProduk()">Kembali ke Produk</button>
+  </section>
+
+  <!-- Bagian Deskripsi -->
+  <section id="deskripsi" class="deskripsi hidden">
+    <h2>Tentang Website</h2>
+    <p>
+      Website <strong>Karya Desain Vintage Elegan</strong> hadir untuk memberikan solusi bagi konsumen yang mencari karya desain unik, klasik, dan penuh nilai estetika. 
+      Kami tidak hanya menjual berbagai tipe desain dengan gaya vintage dan elegan, tetapi juga menawarkan fleksibilitas untuk menyesuaikan desain sesuai kebutuhan dan selera konsumen. 
+      Dengan komitmen pada kualitas, detail, dan kepuasan pelanggan, kami berusaha menghadirkan karya yang mampu memperkuat identitas visual, baik untuk keperluan pribadi maupun bisnis. 
+      Tujuan utama kami adalah menjadi mitra kreatif yang dapat membantu konsumen mengekspresikan ide dan karakter mereka melalui desain yang indah, timeless, dan profesional. 
+      Kami percaya bahwa setiap desain memiliki cerita, dan melalui karya kami, cerita itu bisa diwujudkan dengan sentuhan artistik yang elegan.
+    </p>
+    <button onclick="showProduk()">Kembali ke Produk</button>
+  </section>
+
+  <!-- Bagian Kontak -->
+  <section id="kontak" class="kontak hidden">
+    <h2>Informasi Kontak</h2>
+    <p><strong>Nomor Telepon:</strong></p>
+    <ul>
+      <li>1. 085261340251</li>
+      <li>2. 085236200282</li>
+    </ul>
+    <p><strong>Email:</strong></p>
+    <ul>
+      <li>1. azkanailkhaliss@gmail.com</li>
+      <li>2. firazalfathan@gmail.com</li>
+    </ul>
+    <button onclick="showProduk()">Kembali ke Produk</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Karya Desain Vintage Elegan</p>
+  </footer>
+
+  <script>
+    function showPembayaran() {
+      hideAll();
+      document.getElementById('pembayaran').classList.remove('hidden');
+    }
+    function showProduk() {
+      hideAll();
+      document.getElementById('produk').classList.remove('hidden');
+    }
+    function showDeskripsi() {
+      hideAll();
+      document.getElementById('deskripsi').classList.remove('hidden');
+    }
+    function showKontak() {
+      hideAll();
+      document.getElementById('kontak').classList.remove('hidden');
+    }
+    function hideAll() {
+      document.getElementById('produk').classList.add('hidden');
+      document.getElementById('pembayaran').classList.add('hidden');
+      document.getElementById('deskripsi').classList.add('hidden');
+      document.getElementById('kontak').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
